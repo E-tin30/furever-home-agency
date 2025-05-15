@@ -117,7 +117,7 @@ ul > li a{
     padding: 15px;
 }
 
-#current{
+.current{
     background-color: white;
 }
 
@@ -152,6 +152,10 @@ ul > li a{
     }
     
     #header{
+        width: 100%;
+    }
+    
+    #footer{
         width: 100%;
     }
 }

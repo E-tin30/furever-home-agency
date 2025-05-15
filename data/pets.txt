@@ -1,0 +1,9 @@
+1:user1:Max:dog:Golden Retriever:3:male:Dogs=Yes:Cats=Yes:Kids=Yes:Friendly, energetic, great with kids.
+2:user2:Luna:cat:Siamese:2:female:Dogs=No:Cats=No:Kids=Yes:Affectionate, intelligent, loves attention.
+3:user3:Charlie:dog:Beagle:4:male:Dogs=Yes:Cats=Yes:Kids=Yes:Playful, curious, loves the outdoors.
+4:user4:Rocky:dog:Bulldog:2:male:Dogs=Yes:Cats=No:Kids=Yes:Playful, energetic, needs regular exercise.
+5:user5:Cleo:cat:Persian:5:female:Dogs=No:Cats=No:Kids=Yes:Calm, independent, enjoys quiet time.
+6:user6:Cooper:dog:Labrador Retriever:1:male:Dogs=Yes:Cats=No:Kids=Yes:Energetic, friendly, loves to play fetch.
+7:user7:Penny:cat:Tabby:3:female:Dogs=No:Cats=No:Kids=Yes:Playful, curious, loves to explore.
+8:user8:Stella:dog:Poodle:6:female:Dogs=Yes:Cats=No:Kids=Yes:Intelligent, easy to train, loves to play.
+9:user1:Alexander:dog:Great Dane:4:male:Dogs=Yes:Cats=Yes:Kids=Yes:Energetic, playful and kind

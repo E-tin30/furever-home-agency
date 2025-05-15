@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Furever Home - Browse Available Pets</title>
+        <link rel="stylesheet" href="/css/AdoptionAgency.css">
+        <link rel="stylesheet" href="/css/BrowsePets.css">
+    </head>
+    <body>
+
+        <%- include('partials/header.ejs'); %>
+
+        <div class="container">
+            <div id="side-menu">
+                <%- include('partials/sidemenu.ejs'); %>
+            </div>
+
+            <div id="content">
+                <section class="pet-list">
+                    <% if (pets.length > 0) { %>
+                        <% pets.forEach(pet => { %>
+                            <div class="pet-card">
+                                <img src="/images/<%= pet.id %>.jpg" alt="<%= pet.petName %> - <%= pet.breed %>" width="200">
+                                <!-- problem is that if i include a picture then the new ones added wont have one but in instruction for assignment 2 it says include image -->
+                                <h2><%= pet.petName %></h2>
+                                <p><strong>Breed:</strong> <%= pet.breed %></p>
+                                <p><strong>Age:</strong> <%= pet.age %> years</p>
+                                <p><strong>Friendly with other dogs:</strong> <%= pet.getsAlongWithDogs %></p>
+                                <p><strong>Friendly with cats:</strong> <%= pet.getsAlongWithCats %></p>
+                                <p><strong>Gets along with children:</strong> <%= pet.getsAlongWithKids %></p>
+                                <p><strong>Personality:</strong> <%= pet.description || 'No description available.' %></p>
+                                <button>Interested</button>
+                            </div>
+                        <% }); %>
+                    <% } else { %>
+                        <p>No pets match your criteria. Please try again.</p>
+                    <% } %>
+                </section>
+            </div>
+        </div>
+
+        <%- include('partials/footer.ejs'); %>
+
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Furever Home - Find A Dog Or Cat </title>
+        <link rel="stylesheet" href="/css/AdoptionAgency.css">
+        <script src="/scripts/findpet.js"></script>
+    </head>
+    <body>
+        
+        <%- include('partials/header.ejs'); %>
+        
+        <div class="container">
+            <div id="side-menu">
+                <%- include('partials/sidemenu.ejs'); %>
+            </div>
+
+            <div id="content">
+                <form action="/pets" method="post" onsubmit="validateForm(event)">
+                    <fieldset>
+                        <legend> About your future pet </legend>
+                        <label for="dog"> Dog or Cat?
+                            <input type="radio" id="dog" name="petType" value="dog"> Dog
+                        </label>
+                        <label for="cat">
+                            <input type="radio" id="cat" name="petType" value="cat"> Cat
+                        </label> <br>
+                        <label for="breedOption">What breed of dog or cat?</label>
+                        <select id="breedOption" name="breedOption" onchange="toggleBreedInput()">
+                            <option value="any">Any</option>
+                            <option value="specify">Specify breed</option>
+                        </select> <br>
+                        <label id="breedLabel" style="display: none;">
+                            <input type="text" id="breed" name="breed" placeholder="Enter breed">
+                        </label>
+                        <label for="age"> Preferred animal age?
+                            <select id="age" name="age">
+                                <option> Any </option>
+                                <option> 0 - 1 </option>
+                                <option> 2 - 3 </option>
+                                <option> 4 - 5 </option>
+                                <option> 6 - 7 </option>
+                                <option> 7 - 8 </option>
+                                <option> 8 - 9 </option>
+                                <option> 10+ </option>
+                            </select> </label> <br>
+                        <label for="pet-male"> Preferred Gender
+                            <input type="radio" id="pet-male" name="gender" value="male"> Male
+                        </label>
+                        <label for="pet-female">
+                            <input type="radio" id="pet-female" name="gender" value="female"> Female
+                        </label>
+                        <label for="pet-dont-care">
+                            <input type="radio" id="pet-dont-care" name="gender" value="any"> Doesn't Matter
+                        </label> <br>
+                        <label for="otherDogs"> Does your new pet need to get along with: (check all that apply)
+                            <input type="checkbox" id="otherDogs" name="getAlong" value="otherDogs"> Other dogs
+                        </label>
+                        <label for="otherCats">
+                            <input type="checkbox" id="otherCats" name="getAlong" value="otherCats"> Other cats
+                        </label>
+                        <label for="smallKids">
+                            <input type="checkbox" id="smallKids" name="getAlong" value="smallKids"> Small kids
+                        </label>
+                        <label for="none">
+                            <input type="checkbox" id="none" name="getAlong" value="none"> None
+                        </label>
+                    </fieldset>
+                        <label> <br>
+                            <input type="submit" value="Submit">
+                        </label>
+                        <label>
+                            <input type="reset" value="Clear">
+                        </label>
+                </form>
+            </div>
+        </div>
+        
+        <%- include('partials/footer.ejs'); %>
+
+    </body>
+</html>

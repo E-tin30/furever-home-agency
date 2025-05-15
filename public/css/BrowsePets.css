@@ -17,6 +17,7 @@
 
 .pet-card img {
     border-radius: 100px;
+    height: 125px;
 }
 
 button {

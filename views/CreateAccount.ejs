@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furever Home - Create Account</title>
+    <link rel="stylesheet" href="/css/AdoptionAgency.css">
+    <script src="/scripts/UserAndPass.js"></script>
+</head>
+<body>
+
+    <%- include('partials/header.ejs'); %>
+
+    <div class="container">
+        <div id="side-menu">
+            <%- include('partials/sidemenu.ejs'); %>
+        </div>
+
+        <div id="content">
+           <form action="/CreateAccount" method="post" onsubmit="validateForm(event)">
+                <fieldset>
+                    <legend> Create an account </legend>
+                    <label for="username"> Username:
+                        <input type="text" id="username" name="username" required>
+                    </label> <br>
+                    <label for="last-name"> Password:
+                        <input type="password" id="password" name="password" required>
+                    </label> <br>
+                </fieldset> <br>
+                <button type="submit"> Create Account </button>
+                <button type="reset"> Reset </button>
+           </form>
+
+           <p>
+                <strong>Rules for username:</strong> <br>
+                <ol>
+                    <li>Username can <strong>only</strong> contain letters (both uppercase and lowercase) and digits</li>
+                    <li>Username can <strong>not</strong> contain any special characters</li>
+                </ol> <br>
+                <strong>Rules for password</strong>
+                <ol>
+                    <li>Password must be at least 4 characters long (characters are to be letters and digits <strong>only</strong>)</li>
+                    <li>Passwords must have at least one letter</li>
+                    <li>Passwords must have at least one digit</li>
+                </ol>
+           </p>
+        </div>
+
+    </div>
+
+    <%- include('partials/footer.ejs'); %>
+    
+</body>
+</html>

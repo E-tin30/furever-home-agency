@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Furever Home - Dog Care </title>
-        <link rel="stylesheet" href="AdoptionAgency.css">
+        <link rel="stylesheet" href="/css/AdoptionAgency.css">
         <style>
             ol > li{
                 list-style-type: disc;
@@ -12,25 +12,12 @@
         </style>
     </head>
     <body>
-        <div id="header">
-            <h1>
-                <a href="Home.html"> <img id="logo" src="Logo2.png" title="Made with Looka - https://looka.com/editor/211418752" alt="Furever Home Logo" width=50></a>
-                Furever Home - Dog Care
-            </h1>
-            <p id="date"></p>
-        </div>
+        
+        <%- include('partials/header.ejs'); %>
 
         <div class="container">
             <div id="side-menu">
-                <ul id="side-menu-list">
-                    <li><a href="Home.html"> Home </a></li>
-                    <li><a href="BrowseAvailablePets.html"> Browse available pets </a></li>
-                    <li><a href="FindADogOrCat.html"> Find a dog/cat </a></li>
-                    <li id="current"><a href="DogCare.html"> Dog Care </a></li>
-                    <li><a href="CatCare.html"> Cat Care </a></li>
-                    <li><a href="GiveAwayPet.html"> Have a pet to give away </a></li>
-                    <li><a href="ContactUs.html"> Contact Us </a></li>
-                </ul>
+                <%- include('partials/sidemenu.ejs'); %>
             </div>
 
             <div id="content">
@@ -67,9 +54,8 @@
                 </p>
             </div>
         </div>
-        <div id="footer">
-            <h3> &copy; 2025 Furever Home. All rights reserved. Read our <a href="Disclaimer.html">Privacy/Disclaimer Statement</a> </h3>
-        </div>
-        <script src="DateAndTime.js"></script>
+        
+        <%- include('partials/footer.ejs'); %>
+
     </body>
 </html>

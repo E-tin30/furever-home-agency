@@ -8,9 +8,9 @@ function validateForm(event) {
     const age = document.getElementById("age").value.trim();
     const gender = document.querySelector('input[name="gender"]:checked');
 
-    const otherDogs = document.getElementById('other-dogs').checked;
-    const otherCats = document.getElementById('other-cats').checked;
-    const smallKids = document.getElementById('small-kids').checked;
+    const otherDogs = document.getElementById('otherDogs').checked;
+    const otherCats = document.getElementById('otherCats').checked;
+    const smallKids = document.getElementById('smallKids').checked;
     const none = document.getElementById('none').checked;
     const atLeastOneChecked = otherDogs || otherCats || smallKids || none;
 
@@ -49,7 +49,7 @@ function validateForm(event) {
             errorMessage += "You selected mixed breed but specified the name of the breed in the pure breed section. You must fill in the box that correlates to the option you selected.";
         }
     }
-    if (age === "Select an age") {
+    if (age === "") {
         errorMessage += "Please select the age of your pet.\n";
     }
     if(!gender){
