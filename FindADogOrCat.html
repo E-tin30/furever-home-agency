@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8"/>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Furever Home - Find A Dog Or Cat </title>
-        <link rel="stylesheet" href="AdoptionAgency.css"/>
+        <link rel="stylesheet" href="AdoptionAgency.css">
+        <script src="findpet.js"></script>
     </head>
     <body>
         <div id="header">
@@ -12,6 +13,7 @@
                 <a href="Home.html"> <img id="logo" src="Logo2.png" title="Made with Looka - https://looka.com/editor/211418752" alt="Furever Home Logo" width=50></a>
                 Furever Home - Find A Dog or Cat
             </h1>
+            <p id="date"></p>
         </div>
 
         <div class="container">
@@ -28,19 +30,19 @@
             </div>
 
             <div id="content">
-                <form>
+                <form onsubmit="validateForm(event)">
                     <fieldset>
                         <legend> About your future pet </legend>
-                        <label> Dog or Cat?
-                            <input type="radio" id="dog" name="dog-or-cat" value="dog"> Dog
+                        <label for="dog"> Dog or Cat?
+                            <input type="radio" id="dog" name="petType" value="dog"> Dog
                         </label>
-                        <label>
-                            <input type="radio" id="cat" name="dog-or-cat" value="cat"> Cat
+                        <label for="cat">
+                            <input type="radio" id="cat" name="petType" value="cat"> Cat
                         </label> <br>
                         <label> What breed of dog or cat?
                             <input type="text" id="breed" name="breed">
                         </label> <br>
-                        <label for="pet-age"> Preffered animal age?
+                        <label for="pet-age"> Preferred animal age?
                             <select id="pet-age" name="pet-age">
                                 <option> Doesn't matter </option>
                                 <option> Puppy/Kitten </option>
@@ -52,14 +54,14 @@
                                 <option> 9 - 10 </option>
                                 <option> 11+ </option>
                             </select> </label> <br>
-                        <label for="pet-male"> Preffered Gender
-                            <input type="radio" id="pet-male" name="preffered-gender" value="male"> Male
+                        <label for="pet-male"> Preferred Gender
+                            <input type="radio" id="pet-male" name="preferred-gender" value="male"> Male
                         </label>
                         <label for="pet-female">
-                            <input type="radio" id="pet-female" name="preffered-gender" value="female"> Female
+                            <input type="radio" id="pet-female" name="preferred-gender" value="female"> Female
                         </label>
                         <label for="pet-dont-care">
-                            <input type="radio" id="pet-dont-care" name="preffered-gender" value="doesn't-matter"> Doesn't matter
+                            <input type="radio" id="pet-dont-care" name="preferred-gender" value="doesn't-matter"> Doesn't matter
                         </label> <br>
                         <label for="other-dogs"> Does your new pet need to get along with: (check all that apply)
                             <input type="checkbox" id="other-dogs" name="get-along[]" value="other-dogs"> Other dogs
@@ -70,18 +72,22 @@
                         <label for="small-kids">
                             <input type="checkbox" id="small-kids" name="get-along[]" value="small-kids"> Small kids
                         </label>
+                        <label for="none">
+                            <input type="checkbox" id="none" name="get-along[]" value="none"> None
+                        </label>
                     </fieldset>
-            <label> <br>
-                <input type="submit" value="Submit">
-            </label>
-            <label>
-                <input type="reset" value="Clear">
-            </label>
+                        <label> <br>
+                            <input type="submit" value="Submit">
+                        </label>
+                        <label>
+                            <input type="reset" value="Clear">
+                        </label>
                 </form>
             </div>
         </div>
         <div id="footer">
             <h3> &copy; 2025 Furever Home. All rights reserved. Read our <a href="Disclaimer.html">Privacy/Disclaimer Statement</a> </h3>
         </div>
+        <script src="DateAndTime.js"></script>
     </body>
 </html>

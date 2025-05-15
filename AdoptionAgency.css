@@ -11,11 +11,22 @@ h3 a:visited{
     color: darksalmon;
 }
 
+#header{
+    background-color: cornsilk;
+    height: fit-content;
+}
+
+#date{
+    padding: 10px;
+    position: relative;
+    top: -30px;
+}
+
 #footer{
     background-color: cornsilk;
     padding: 10px;
     position: relative;
-    top: -15px;
+    top: 15px;
     text-align: center;
 }
 
@@ -37,8 +48,6 @@ h3 a:visited{
     background-color: cornsilk;
     width: 200px;
     padding: 10px;
-    position: relative;
-    top: -25px;
 }
 
 #content{
@@ -47,8 +56,6 @@ h3 a:visited{
     margin-left: 10px;
     font-size: large;
     padding: 10px;
-    position: relative;
-    top: -25px;
 }
 
 #logo{
@@ -61,16 +68,13 @@ h3 a:visited{
     width: 100%;
     text-align: center;
     margin-top: -50px;
+    position: relative;
+    top: 15px;
 }
 
 #dog-cat{
     width: 50%;
     padding: 20px;
-}
-
-figcaption{
-    position: relative;
-    top: -15px;
 }
 
 h1{
